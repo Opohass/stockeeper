@@ -23,7 +23,7 @@ MODEL_NAMES = [
 ]
 db = SQLAlchemy()
 DB_NAME = "database.db"
-MODEL_DIR = "data/flask_app/website/static/byte_models"
+MODEL_DIR = "stockeeper/data/flask_app/website/static/byte_models"
 print(os.getcwd())
 def unpickle(file_name):
     with open(MODEL_DIR + "/" + file_name, "rb") as f:

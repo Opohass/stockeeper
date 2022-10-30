@@ -8,4 +8,4 @@ yfinance
 matplotlib==3.5.3
 Jinja2
 SQLAlchemy==1.4.42
-tensorflow==2.9.2
+tensorflow
