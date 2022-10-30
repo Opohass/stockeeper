@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://time.com/nextadvisor/wp-content/uploads/2021/09/na-what-are-cyclical-stocks.jpg" class="d-block w-100" alt="..." style="height:40vh; width:100vh;">
+        <div class="carousel-caption d-none d-md-block bg-primary bg-opacity-50">
+          <h3>Hard To Make Sense Of Your Stocks?</h3>
+          <p>Want To Manage Your Stocks And Get Predictions For The Future?<br/>Our Platform Offers AI Powered Models And A Convenient Dashboard To Help Maintain Your Assets.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://img.etimg.com/thumb/msid-95076042,width-525,height-393,imgsize-268882,resizemode-8,quality-100/markets/stocks/news/five-stocks-including-a-battery-maker-from-mid-cap-space-with-potential-upside-of-more-than-27.jpg" class="d-block w-100" alt="..." style="height:40vh; width:100vh;">
+        <div class="carousel-caption d-none d-md-block bg-primary bg-opacity-50">
+            <h3>Smartphone Compatible</h3>
+            <p>Our Platform Offers Easy Access From Every Device!<br/>So you can stay updated On The Go, Anytime, Anywhere.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2021/09/how-to-make-money-in-stocks.jpg" class="d-block w-100" alt="..." style="height:40vh; width:100vh;">
+        <div class="carousel-caption d-none d-md-block bg-primary bg-opacity-50">
+            <h3>Stay Ahead Of The Game, With AI</h3>
+            <p>Our Platform Offers Stock Prediction For Up To A Month Ahead!<br/>What Are You Waiting For? Get Started Today For <strong>Free</strong>!</p>
+          {% if user.is_authenticated %}
+          {% else %}
+          <a class="btn btn-primary" href="/sign-up">Sign Up</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+</br>
+
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Meet The Team
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <div class="container text-center">
+            <div class="row row-cols-auto">
+              <div class="col">
+                <div class="row">
+                  <h5>Yoav Kitai</h5>
+                </div>
+                <div class="row">
+                  <img src="static/yoav.jpg" class="rounded-circle" style="height:15vh; width:15hv;">
+                </div>
+              </div>
+              <div class="col" style="text-align:left;">
+                Born In Northern Israel.</br>
+                Fascinated With The Potential Of AI Systems
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          AI In The News
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          Here Are Some Articles About AI In The Stock Market:</br>
+          <a href="https://business.fiu.edu/graduate/insights/artificial-intelligence-in-the-stock-market.cfm" class="text-dark">Florida International University Business</a>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Accordion Item #3
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+  </div>
+  
+{% endblock %}

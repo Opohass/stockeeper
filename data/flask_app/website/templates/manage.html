@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}Manage Your Stocks{% endblock %}
+{% block content %}
+    <h1 align="center">Hi {{ user.firstname }} Manage Your Stocks In This Page</h1>
+    <form method="POST">
+        <h3 align="center">Add Or Remove A Stock To Your Existing Ones</h3>
+        <div class="form-group mb-3">
+            <label for="add_stock" class="form-label">&nbsp Choose A Stock</label>
+            <select class="form-select form-select-lg mb-3" aria-label="select stock" name="stock" id="stock">
+                <option value="apple" selected>Apple</option>
+                <option value="google">Google</option>
+                <option value="amazon">Amazon</option>
+                <option value="bitcoin">Bitcoin</option>
+                <option value="tesla">Tesla</option>
+                <option value="disney">Disney</option>
+                <option value="netflix">Netflix</option>
+                <option value="nvidia">Nvidia</option>
+                <option value="qualcomm">Qualcomm</option>
+                <option value="elbit">Elbit</option>
+            </select>
+        </div>
+        <div class="form-group mb-3">
+            <label for="amount" class="form-label">&nbsp Amount</label>
+            <input type="number" min="1" value="1" class="form-control" id="amount" name="amount"/>
+        </div>
+        <p>&nbsp Add Or Remove</p>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="add_remove" id="add" value="add" checked="checked">
+            <label class="form-check-label" for="add">Add Stock</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="add_remove" id="remove" value="remove">
+            <label class="form-check-label" for="remove">Remove Stock</label>
+        </div>
+        <br/>
+        <br/>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,11 @@
+Flask==2.2.2
+Flask-Login==0.6.2
+Flask-SQLAlchemy==3.0.2
+sklearn
+numpy==1.23.2
+pandas==1.4.3
+yfinance
+matplotlib==3.5.3
+Jinja2
+SQLAlchemy==1.4.42
+tensorflow==2.9.2

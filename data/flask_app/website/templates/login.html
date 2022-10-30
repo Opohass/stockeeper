@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Login Page{% endblock %}
+{% block content %}
+    <form method="POST">
+        <h3 align="center">Welcome Back</h3>
+        <div class="jumbotron">
+            <div class="form-group mb-3">
+                <label for="email" class="form-label">&nbsp Email Address</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="example@example.com"/>
+            </div>
+            <div class="form-group mb-3">
+                <label for="password" class="form-label">&nbsp Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password"/>
+            </div>
+            <br/>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+    </form>
+{% endblock %}
